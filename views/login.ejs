@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>測試網頁</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/menu.css" rel="stylesheet"/>  
+<link href="/css/bottom1.css" rel="stylesheet"/>      
+<!------------------------->
+
+</head>
+   
+<body> 
+    <!--fb--> 
+    <script>
+        window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '{your-app-id}',
+            cookie     : true,
+            xfbml      : true,
+            version    : '{api-version}'
+        });
+            
+        FB.AppEvents.logPageView();   
+            
+        };
+    
+        (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v7.0&appId=662813291150760&autoLogAppEvents=1" nonce="Yw7apH66"></script>
+    
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">           
+        </div>
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="content">
+            <h2>登入</h2>
+
+            <form action = "/user/login" method="POST">
+                <span class="name">帳號: </span>
+                <span class="value"><input type="email" name="acct_num" value="10556034@ntub.edu.tw" required></span>
+                <br/>
+                        
+                <span class="name">密碼: </span>
+                <span class="value"><input type="password" name="acct_pd" value="123456" minlength="6" maxlength="10" pattern="[a-zA-Z0-9]{6,}" title="至少輸入6個並少於10個數字或英文字母" required></span>
+                <br/>
+
+                <span class="name"></span>
+                <span class="value"><input type="submit" value="登入" ></span>
+                <div class="fb-login-button" data-size="small" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+                
+                <input type ="reset" onclick="javascript:location.href='/'" value="取消"></input>
+                
+            </form>
+            <div
+                class="fb-like"
+                data-share="true"
+                data-width="450"
+                data-show-faces="true">
+                </div>
+                        
+        </div>       
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            NTUB imd, 2019.    
+        </div>  
+    </div>
+    <!--**************************-->    
+</body>
+   
+</html>

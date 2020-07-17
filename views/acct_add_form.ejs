@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>測試網頁</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/menu.css" rel="stylesheet"/>  
+<link href="/css/bottom2.css" rel="stylesheet"/>      
+<!------------------------->
+</head>
+   
+<body>
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">           
+        </div>
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="content">
+            <h2>註冊</h2>
+
+            <form action = "/acct/add" method = "post">
+                <div class="form">                                    
+                    <span class="name">帳號: </span>
+                    <span class="value"><input type="email" name="acct_num" value="10556034" required></span>
+                    <br/>
+                    
+                    <span class="name">密碼: </span>
+                    <span class="value"><input type="password" name="acct_pd" minlength="6" maxlength="10" pattern="[a-zA-Z0-9]{6,}" title="至少輸入6個並少於10個數字或英文字母" required></span>
+                    <br/>
+
+                    <span class="name">暱稱: </span>
+                    <span class="value"><input type="text" name="acct_name" value="子葳" required></span>
+                    <br/>
+                                    
+                    <span class="name"></span>
+                    <span class="value"><input type="submit" value="註冊" ></span>
+                    
+                    <input type ="submit" onclick="javascript:location.href='/'" value="取消"></input>
+                </div>                              
+            </form>      
+        </div>       
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            NTUB imd, 2019.    
+        </div>  
+    </div>
+    <!--**************************-->    
+</body>
+   
+</html>

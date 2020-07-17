@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>測試網頁</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/menu.css" rel="stylesheet"/>  
+<link href="/css/bottom4.css" rel="stylesheet"/>      
+<!------------------------->
+</head>
+   
+<body>
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">           
+        </div>
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="content">
+            <h2>輸入道歉資料</h2>
+
+            <p class="describe">請選擇符合情況的條件和輸入當下的心情，讓我們作為生成文章的參考</p>
+
+            <form action = "/edit" method="POST">
+                <div class="form">
+                    <span>*關係：</span>
+                    <span><select id="relation" name="relation">
+                        <option value="couple">情侶</option>
+                        <!-- <option value="old">長輩</option>
+                        <option value="young">平、晚輩</option>
+                        <option value="family_ba">家人-爸爸</option>
+                        <option value="family_ma">家人-媽媽</option> -->
+                    </select></span>
+                    <br/> 
+                    
+                    <span>*星座：</span> 
+                    <!-- disabled="disabled" -->
+                    <span><select id="star" name="constellation" >
+                        <option selected="selected" value="牡羊座">牡羊座</option>
+                        <option>金牛座</option>
+                        <option>雙子座</option>
+                        <option>巨蟹座</option>
+                        <option>獅子座</option>
+                        <option>處女座</option>
+                        <option>天秤座</option>
+                        <option>天蠍座</option>
+                        <option>射手座</option>
+                        <option>魔羯座</option>
+                        <option>水瓶座</option>
+                        <option>雙魚座</option>
+                    </select></span>
+                    <br/> 
+
+                    <span>*親密程度：</span>
+                    <span class="intimacy" id="intimacy" disabled="disabled">
+                        <input type="radio" name="familiar" value="F" disabled>熟悉 
+                        <input type="radio" name="unfamiliar" value="U" disabled>不熟悉 
+                    </span>
+                    <br/> 
+
+                    <span>*事由：</span>
+                    <span><select id="reason" name="reason">
+                        <!-- <option value="thing">做錯事</option>
+                        <option value="talk">講錯話</option>
+                        <option value="high">自尊太高</option>
+                        <option value="cherish">不珍惜</option> -->
+                        <option value="back">挽回</option>
+                        <!-- <option value="angry">情緒管理不當</option>
+                        <option value="forget">忘記重要節日</option>
+                        <option value="miss">誤會</option> -->
+                    </select></span>
+                    <br/>
+
+                    <span class="name">*心情描述：</span>
+                    <span class="value">
+                        <input type="text" name="description" value="" placeholder="例如: 很愧疚" required>
+                    </span>
+                    <br/>
+
+                    <hr size="1px" align="center" width="100%">
+                    <input type ="reset" onclick="javascript:location.href='/logout'" value="登出"></input>
+                    <input type ="reset" value="重新輸入"></input>  
+                    <input type ="submit" value="下一步"></input>
+                    <br/>
+                </div>
+            </form>
+
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            NTUB imd, 2019.    
+        </div>  
+    </div>
+    <!--**************************-->    
+</body>
+   
+</html>

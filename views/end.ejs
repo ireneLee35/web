@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>測試網頁</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/menu.css" rel="stylesheet"/>  
+<link href="/css/bottom3.css" rel="stylesheet"/>      
+<!------------------------->
+</head>
+   
+<body>
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">           
+        </div>
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="content">
+            <h2>完成了！</h2>
+            <p class="describe">
+                辛苦了，感謝你的使用，祝你順利與對方解開心中的疙瘩 &#x1F60A;
+            </p>
+            
+            <div class="form">
+                <tr>
+                    <td><%= item.a_essay %></td>
+                </tr>
+                <br/>
+            </div>
+
+            <input type ="submit" onclick="javascript:location.href='/send'" value="發送給對方"></input>
+            <input type ="submit" onclick="javascript:location.href='/enter'" value="再一次"></input>  
+            <input type ="submit" onclick="javascript:location.href='/logout'" value="登出"></input>             
+        </div>       
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            NTUB imd, 2019.    
+        </div>  
+    </div>
+    <!--**************************-->    
+</body>
+   
+</html>
